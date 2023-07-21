@@ -1,0 +1,3 @@
+export const DB_ERROR_CODES = {
+  DUPLICATE_KEY_CODE: 11000,
+};

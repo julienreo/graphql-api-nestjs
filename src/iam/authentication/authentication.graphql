@@ -1,0 +1,26 @@
+type AuthPayload {
+  accessToken: String!
+  refreshToken: String!
+}
+
+input signInInput {
+  email: String!
+  password: String!
+}
+
+input signUpInput {
+  firstname: String!
+  lastname: String!
+  email: String!
+  password: String!
+}
+
+input refreshTokensInput {
+  refreshToken: String!
+}
+
+type Mutation {
+  signUp(signUpInput: signUpInput!): User!
+  signIn(signInInput: signInInput!): AuthPayload!
+  refreshTokens(refreshTokensInput: refreshTokensInput!): AuthPayload!
+}
